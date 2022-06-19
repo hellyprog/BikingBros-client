@@ -38,7 +38,17 @@ export class WalletConnectorService {
 
   async isCorrectNetworkConnected(): Promise<boolean> {
     const { chainId } = await this.provider.getNetwork();
+
     return chainId === this.appConfigService.mumbaiNetworkId;
+  }
+
+  async switchNetworkToMumbai() {
+    try {
+      const chainId = '0x' + this.appConfigService.mumbaiNetworkId.toString(16);
+      await this.provider.send('wallet_switchEthereumChain', [{ chainId }]);
+    } catch(error) {
+      console.log(error);
+    }
   }
 
   subscribeToWalletEvent(eventName: string, callback: any) {

@@ -1,1 +1,8 @@
-<p>header works!</p>
+<div class="title">
+    <a class="title__link" [routerLink]="['/home']">BikingBros</a>
+</div>
+<div class="connect-button" (click)="connectWallet()">
+    <mat-icon>account_balance_wallet</mat-icon>
+    <div *ngIf="!walletAddress">Connect Wallet</div>
+    <div *ngIf="walletAddress">{{walletAddress}}</div>
+</div>

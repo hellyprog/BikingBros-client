@@ -1,0 +1,61 @@
+@import 'colors';
+@import 'variables';
+
+:host {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: $header-height;
+  z-index: 1000;
+
+  &.transparent {
+    background-color: transparent;
+
+    .title__link,
+    .connect-button {
+      color: $white;
+    }
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+
+    &__link {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .connect-button {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $ultramarine;
+
+    &:hover {
+      mat-icon {
+        margin-right: 10px;
+      }
+    }
+
+    mat-icon {
+      margin-right: 5px;
+      transition: 0.5s;
+    }
+  }
+}
+
+@media only screen and (min-width: 319px) and (max-width: 479px) {
+  :host {
+    .connect-button {
+      padding: 5px;
+    }
+  }
+}

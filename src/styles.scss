@@ -35,3 +35,35 @@ body {
   display: flex;
   box-sizing: border-box;
 }
+
+.snackbar-dark {
+  background: $crimson-sky;
+  color: $white;
+  border: 1px solid $white;
+
+  button {
+    background: none;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.snackbar-light {
+  background: $light-blue;
+  color: $white;
+  border: 1px solid $white;
+
+  button {
+    background: none;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 319px) and (max-width: 767px) {
+  :root {
+    font-size: 14px;
+  }
+}
