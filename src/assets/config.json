@@ -1,7 +1,7 @@
 {
     "contract": {
-        "customsContractAddress": "",
-        "insuranceStoreContractAddress": "",
-        "wsProvider": ""
-    }
+        "bikeContractAddress": "0x971aE8d1509Ee141faD82896378142daAbAA13BA",
+        "wsProvider": "wss://polygon-mumbai.g.alchemy.com/v2/HDEJz1gdWe353VJfn8tiDXnkT9jZV7QY"
+    },
+    "mumbaiNetworkId": 80001
 }

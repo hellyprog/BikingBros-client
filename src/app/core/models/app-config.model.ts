@@ -1,9 +1,9 @@
 export class AppConfig {
     contract!: ContractsConfiguration;
+    mumbaiNetworkId!: number;
 }
 
 export class ContractsConfiguration {
-    customsContractAddress!: string;
-    insuranceStoreContractAddress!: string;
+    bikeContractAddress!: string;
     wsProvider!: string;
 }

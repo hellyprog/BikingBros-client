@@ -19,4 +19,8 @@ export class AppConfigService {
   get contract() {
     return this.appConfig.contract;
   }
+
+  get mumbaiNetworkId() {
+    return this.appConfig.mumbaiNetworkId;
+  }
 }
