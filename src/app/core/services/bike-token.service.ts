@@ -10,15 +10,18 @@ declare let window: any;
   providedIn: 'root'
 })
 export class BikeTokenService {
-  provider: ethers.providers.Web3Provider;
-  wsProvider: ethers.providers.WebSocketProvider;
+  provider!: ethers.providers.Web3Provider;
+  wsProvider!: ethers.providers.WebSocketProvider;
   bikeContract: any = {};
 
   constructor(
     private walletConnectorService: WalletConnectorService,
     private appConfigService: AppConfigService
   ) {
-    this.provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
+    if (window.ethereum) {
+      this.provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
+    }
+
     this.wsProvider = new ethers.providers.WebSocketProvider(this.appConfigService.contract.wsProvider);
     this.bikeContract.address = this.appConfigService.contract.bikeContractAddress;
     this.bikeContract.abi = BikeToken.abi;

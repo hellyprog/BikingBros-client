@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   }
 
   async ngOnInit() {
-    console.log(ethers.utils.formatEther(await this.bikeTokenService.getBalance()));
+    //console.log(ethers.utils.formatEther(await this.bikeTokenService.getBalance()));
   }
 
 }

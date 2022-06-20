@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) {
     this.router.events.subscribe((value) => {
       if (value instanceof NavigationEnd) {
-        const homePath = '/home';
+        const homePath = '/';
         this.isHomePage = value.url === homePath || value.urlAfterRedirects === homePath;
       }
     });
