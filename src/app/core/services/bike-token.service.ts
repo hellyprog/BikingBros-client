@@ -36,6 +36,8 @@ export class BikeTokenService {
 
       return contract['balanceOf'](await this.walletConnectorService.getWalletAddress());
     }
+
+    return null;
   }
 
   subscribeToContractEvent(eventName: string, callback: any) {
