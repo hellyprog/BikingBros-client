@@ -8,8 +8,8 @@
 
     .video-background {
         position: fixed;
-        right: 0;
-        bottom: 0;
+        left: 0;
+        top: 0;
         width: 100vw;
         height: 100vh;
         object-fit: cover;
@@ -26,7 +26,6 @@
             position: fixed;
             bottom: 0;
             left: 0;
-            height: 10rem;
             width: 100%;
             border-top: 1px solid $white;
             display: flex;
@@ -41,10 +40,27 @@
                 font-size: 2rem;
                 text-transform: uppercase;
                 font-weight: bold;
+                padding: 0 10px;
+                height: 10rem;
 
                 &:hover {
                     background: rgba(0, 0, 0, 0.6);
                     cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    :host {
+        .content {
+            .main-menu {
+                flex-direction: column;
+        
+                &__item {
+                    border-bottom: 1px solid $white;
+                    padding: 15px 0;
                 }
             }
         }
